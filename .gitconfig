@@ -1,0 +1,42 @@
+[color]
+        status = auto
+        branch = auto
+        log = auto
+        commit = auto
+        diff = auto
+        interactive = auto
+        ui = true
+        pager = true
+
+[color "branch"]
+        current = yellow
+        local = green
+        remote = cyan
+
+[color "diff"]
+        meta = yellow
+        frag = cyan
+        old = red
+        new = green 
+
+[color "status"]
+        changed = yellow
+
+[user]
+        email = jeffhsta@riseup.net
+        name = Jefferson Stachelski
+
+[alias]
+        aa = add --all
+        co = checkout
+        cm = commit -m
+        st = status
+        df = diff
+        dc = diff --cached
+        pr = pull --rebase
+        pop = stash pop
+        lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Creset%s'
+        ls = log --stat
+
+[push]
+        default = simple
