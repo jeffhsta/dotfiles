@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 
-plugins=(git python ruby virtualenv rbenv vim)
+plugins=(git python ruby virtualenv rbenv vim docker docker-compose gpg-agent)
 
 # User configuration
 
@@ -24,3 +24,6 @@ alias gpg-gmail="touch ~/tmp/gpg-bla && gpg -u 6708DD88 -s ~/tmp/gpg-bla && rm ~
 alias gpg-pixteam="touch ~/tmp/gpg-bla && gpg -u D6497991 -s ~/tmp/gpg-bla && rm ~/tmp/gpg-bla*"
 
 # screenfetch # it makes the new term slow
+
+export NVM_DIR="/home/jeffhsta/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
