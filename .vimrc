@@ -51,11 +51,13 @@ let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.swp$', '\.pyc$']
 
+" Set Tab as 2 spaces
+set tabstop=2 shiftwidth=2 expandtab
+
 " Short cuts:
 let mapleader=","
-map <F2> :NERDTreeToggle<CR>
-map <F3> :NERDTreeFind<CR>         " Open NERDTree and focus on current file
-map <F4> :Ack
+map <C-]> :NERDTreeToggle<CR>
+map <C-F> :NERDTreeFind<CR>         " Open NERDTree and focus on current file
 map <F5> :e!<CR>                    " force reload current file
 map <F6> :CtrlPClearAllCaches<CR>   " clear all CtrlP cache
 map <leader>W :w<CR>
@@ -65,10 +67,11 @@ map <leader>a :wincmd h<CR>        " go window left
 map <leader>d :wincmd l<CR>        " go window right
 map <leader>v :vertical :new<CR>   " open new vertical window
 map <leader>h :new<CR>             " open a new horizontal window
-map <leader>A :qa!<CR>             " it force quit all vim buffers
 map <leader>q :q<CR>               " it quit current vim buffer
 map <leader>Q :q!<CR>              " it force quit current vim buffer
 map <leader>n :tabnew<CR>          " create a new tab
 map <leader>z :tabprevious<CR>     " move to previous tab
 map <leader>x :tabnext<CR>         " move to next tab
-map <leader>y :call system('xclip -selection clipboard', @0)<CR>  " move last yank selection to xclipboard
+map <leader>y :call system('xclip -selection clipboard', @0)<CR>  " move last yank selection to xclip
+map <leader>b :CtrlPBuffer<cr>
+map <leader>t :CtrlPTag<cr>
