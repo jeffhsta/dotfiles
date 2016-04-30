@@ -27,9 +27,7 @@
         name = Jefferson Stachelski
 
 [alias]
-        aa = add --all
         co = checkout
-        cm = commit -m
         st = status
         df = diff
         dc = diff --cached
