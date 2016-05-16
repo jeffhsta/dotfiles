@@ -8,15 +8,20 @@ call vundle#begin()
 
 " Plugin 'jamessan/vim-gnupg' " It get a lot of warning when I try to open -
 " gpg file and I don't want decrypt them
-Plugin 'tpope/vim-pathogen'
-Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'erickzanardo/vim-xclip'
+Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tmux-plugins/vim-tmux'
-Plugin 'erickzanardo/vim-xclip'
+Plugin 'tpope/vim-pathogen'
+Plugin 'tpope/vim-unimpaired'
 
-" Status bar plugin
-Plugin 'bling/vim-airline'
+" Status bar plugin (vim-airline)
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
