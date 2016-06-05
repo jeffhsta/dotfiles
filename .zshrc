@@ -1,10 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="jeffhsta"
 HYPHEN_INSENSITIVE="true"
 
-plugins=(git python ruby virtualenv rbenv vim docker docker-compose gpg-agent)
+plugins=(git python ruby rbenv virtualenv-prompt vim docker docker-compose gpg-agent)
 
 # User configuration
 
@@ -17,8 +17,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias l="ls -la"
 alias be="bundle exec"
-
-# screenfetch # it makes the new term slow
 
 export NVM_DIR="/home/jeffhsta/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
