@@ -39,3 +39,9 @@
 
 [push]
   default = simple
+
+[commit]
+	gpgsign = true
+
+[rebase]
+	gpgsign = true
