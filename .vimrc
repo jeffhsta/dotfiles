@@ -60,6 +60,10 @@ let NERDTreeIgnore=['\.swp$', '\.pyc$']
 " Set Tab as 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
+" Cursor line higlight
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
+
 " Short cuts:
 let mapleader=","
 map <C-]> :NERDTreeToggle<CR>
