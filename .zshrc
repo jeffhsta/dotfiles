@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="jeffhsta"
 ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 
@@ -11,14 +10,14 @@ plugins=(git python ruby rbenv virtualenv-prompt vim docker docker-compose gpg-a
 
 export EDITOR=vim
 export LANG=en_US.UTF-8
-export ANDROID_STUDIO=/opt/android-studio/bin
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin:$ANDROID_STUDIO:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin::$PATH
+
 
 source $ZSH/oh-my-zsh.sh
 
 alias l="ls -la"
 alias be="bundle exec"
+alias ssh-connections="sudo lsof -i -n | egrep '\<ssh\>'"
 
 export NVM_DIR="/home/jeffhsta/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
