@@ -10,6 +10,7 @@ plugins=(git python ruby rbenv virtualenv-prompt vim docker docker-compose gpg-a
 
 export EDITOR=vim
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.rbenv/bin::$PATH
 
 
