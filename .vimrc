@@ -21,6 +21,7 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'tpope/vim-pathogen'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'wting/rust.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Status bar plugin (vim-airline)
 let g:airline_left_sep = ''
