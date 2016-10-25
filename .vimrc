@@ -48,6 +48,7 @@ set laststatus=2
 set cpoptions+=n
 set number
 set vb
+set ignorecase
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=235 gui=NONE guifg=NONE guibg=NONE
 
 " CtrlP to ignore
