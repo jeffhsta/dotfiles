@@ -8,7 +8,6 @@ call vundle#begin()
 
 " Plugin 'jamessan/vim-gnupg' " It get a lot of warning when I try to open -
 " gpg file and I don't want decrypt them
-Plugin 'bling/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'erickzanardo/vim-xclip'
 Plugin 'ervandew/supertab'
@@ -22,10 +21,18 @@ Plugin 'tpope/vim-pathogen'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'wting/rust.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tfnico/vim-gradle'
+Plugin 'itchyny/lightline.vim'
 
-" Status bar plugin (vim-airline)
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+" Status bar plugin (lightline)
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
+      \ }
 
 call vundle#end()            " required
 filetype plugin indent on    " required
