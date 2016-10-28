@@ -52,12 +52,12 @@ set ignorecase
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=235 gui=NONE guifg=NONE guibg=NONE
 
 " CtrlP to ignore
-set wildignore+=*.swp,*.pyc
+set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules
 let g:ctrlp_show_hidden = 1
 
 " NerdTree show hidden files
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.swp$', '\.pyc$']
+let NERDTreeIgnore=['\.swp$', '\.pyc$', '\.class$']
 
 " Set Tab as 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
