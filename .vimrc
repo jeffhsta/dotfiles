@@ -76,21 +76,13 @@ set cursorline
 " Short cuts:
 let mapleader=","
 map <C-]> :NERDTreeToggle<CR>
-map <C-F> :NERDTreeFind<CR>         " Open NERDTree and focus on current file
-map <F5> :e!<CR>                    " force reload current file
-map <F6> :CtrlPClearAllCaches<CR>   " clear all CtrlP cache
-map <leader>W :w<CR>
-map <leader>w :wincmd k<CR>        " go window up
-map <leader>s :wincmd j<CR>        " go window down
-map <leader>a :wincmd h<CR>        " go window left
-map <leader>d :wincmd l<CR>        " go window right
-map <leader>v :vertical :new<CR>   " open new vertical window
-map <leader>h :new<CR>             " open a new horizontal window
-map <leader>q :q<CR>               " it quit current vim buffer
-map <leader>Q :q!<CR>              " it force quit current vim buffer
-map <leader>n :tabnew<CR>          " create a new tab
-map <leader>z :tabprevious<CR>     " move to previous tab
-map <leader>x :tabnext<CR>         " move to next tab
+map <C-F> :NERDTreeFind<CR>            " Open NERDTree and focus on current file
+map <leader>e :e!<CR>                  " force reload current file
+map <leader>c :CtrlPClearAllCaches<CR> " clear all CtrlP cache
+map <leader>v :vertical :new<CR>       " open new vertical window
+map <leader>h :new<CR>                 " open a new horizontal window
+map <leader>n :tabnew<CR>              " create a new tab
+map <leader>b :CtrlPBuffer<cr>         " Clear CtrlP buffers
+map <leader>t :CtrlPTag<cr>            " List tags
+map <leader>d :bdelete<cr>             " Delete current buffer
 map <leader>y :call system('xclip -selection clipboard', @0)<CR>  " move last yank selection to xclip
-map <leader>b :CtrlPBuffer<cr>
-map <leader>t :CtrlPTag<cr>
