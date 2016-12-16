@@ -23,9 +23,12 @@
   changed = yellow
 
 [user]
-  email = jeffhsta@riseup.net
-  name = Jeff Stachelski
-	signingkey = C39C19AC
+  name = Jefferson Stachelski
+  email = jstachel@thoughtworks.com
+	signingkey = 529B2ADE542DB82E0F52C6459DBC4ADD36277123
+  ;name = Jeff Stachelski
+  ;email = jeffhsta@riseup.net
+	;signingkey = C39C19AC
 
 [alias]
   co = checkout
