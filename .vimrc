@@ -23,6 +23,8 @@ Plugin 'wting/rust.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tfnico/vim-gradle'
 Plugin 'itchyny/lightline.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mxw/vim-jsx'
 
 " Status bar plugin (lightline)
 let g:lightline = {
@@ -66,6 +68,9 @@ let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.swp$', '\.pyc$', '\.class$']
 
+" JSX syntax on .js files
+let g:jsx_ext_required = 0
+
 " Set Tab as 2 spaces
 set tabstop=2 shiftwidth=2 expandtab
 
@@ -82,7 +87,7 @@ map <leader>c :CtrlPClearAllCaches<CR> " clear all CtrlP cache
 map <leader>v :vertical :new<CR>       " open new vertical window
 map <leader>h :new<CR>                 " open a new horizontal window
 map <leader>n :tabnew<CR>              " create a new tab
-map <leader>b :CtrlPBuffer<cr>         " Clear CtrlP buffers
-map <leader>t :CtrlPTag<cr>            " List tags
-map <leader>d :bdelete<cr>             " Delete current buffer
+map <leader>b :CtrlPBuffer<CR>         " Clear CtrlP buffers
+map <leader>t :CtrlPTag<CR>            " List tags
+map <leader>d :bdelete<CR>             " Delete current buffer
 map <leader>y :call system('xclip -selection clipboard', @0)<CR>  " move last yank selection to xclip
