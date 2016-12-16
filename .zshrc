@@ -19,6 +19,8 @@ source $ZSH/oh-my-zsh.sh
 alias l="ls -la"
 alias be="bundle exec"
 alias ssh-connections="sudo lsof -i -n | egrep '\<ssh\>'"
+alias sxpass="/home/jeffhsta/code/LATAM/sierra-xray/secretos/sxpass"
+alias e="emacsclient -nw --alternate-editor="" -c "$@""
 
 export NVM_DIR="/home/jeffhsta/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
