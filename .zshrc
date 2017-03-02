@@ -14,12 +14,12 @@ export LC_ALL=en_US.UTF-8
 export PATH="$HOME/.exenv/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-eval "$(exenv init -)"
-
-source $ZSH/oh-my-zsh.sh
-
 alias l="ls -la"
 alias be="bundle exec"
 alias ssh-connections="sudo lsof -i -n | egrep '\<ssh\>'"
 alias e="emacsclient -nw --alternate-editor="" -c "$@""
+alias nvm-setup=". \"$NVM_DIR/nvm.sh\""
+
+eval "$(exenv init -)"
+
+source $ZSH/oh-my-zsh.sh
