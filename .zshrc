@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="miloshadzic"
 HYPHEN_INSENSITIVE="true"
 
 plugins=(git python ruby rbenv virtualenv-prompt vim docker docker-compose gpg-agent)
