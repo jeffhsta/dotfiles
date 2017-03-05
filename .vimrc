@@ -30,10 +30,10 @@ Plugin 'mxw/vim-jsx'
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'component': {
-      \   'readonly': '%{&readonly?"RO":""}',
+      \   'readonly': '%{&readonly?"":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 call vundle#end()            " required
