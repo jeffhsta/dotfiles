@@ -61,6 +61,10 @@ set ignorecase
 set clipboard=unnamed
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=235 gui=NONE guifg=NONE guibg=NONE
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " CtrlP to ignore
 set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules
 let g:ctrlp_show_hidden = 1
