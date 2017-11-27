@@ -19,12 +19,19 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'tpope/vim-pathogen'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tfnico/vim-gradle'
 Plugin 'itchyny/lightline.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-endwise'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mhinz/vim-signify'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rhysd/vim-crystal'
+Plugin 'mhinz/vim-startify'
 
 " Status bar plugin (lightline)
 let g:lightline = {
@@ -56,9 +63,17 @@ set backspace=indent,eol,start
 set laststatus=2
 set cpoptions+=n
 set number
+set relativenumber
 set vb
 set ignorecase
 set clipboard=unnamed
+set ttyfast
+set lazyredraw
+set novisualbell
+set incsearch
+set colorcolumn=100
+hi ColorColumn ctermbg=darkgrey
+set wildmenu
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=235 gui=NONE guifg=NONE guibg=NONE
 
 if executable('ag')
@@ -66,7 +81,7 @@ if executable('ag')
 endif
 
 " CtrlP to ignore
-set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules
+set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps
 let g:ctrlp_show_hidden = 1
 
 " NerdTree show hidden files
@@ -85,14 +100,12 @@ set cursorline
 
 " Short cuts:
 let mapleader=","
-map <C-]> :NERDTreeToggle<CR>
+map <C-\> :NERDTreeToggle<CR>
 map <C-F> :NERDTreeFind<CR>            " Open NERDTree and focus on current file
 map <leader>e :e!<CR>                  " force reload current file
 map <leader>c :CtrlPClearAllCaches<CR> " clear all CtrlP cache
-map <leader>v :vertical :new<CR>       " open new vertical window
-map <leader>h :new<CR>                 " open a new horizontal window
+map <leader>\| :vertical :new<CR>       " open new vertical window
+map <leader>- :new<CR>                 " open a new horizontal window
 map <leader>n :tabnew<CR>              " create a new tab
 map <leader>b :CtrlPBuffer<CR>         " Clear CtrlP buffers
-map <leader>t :CtrlPTag<CR>            " List tags
-map <leader>d :bdelete<CR>             " Delete current buffer
-map <leader>y :call system('xclip -selection clipboard', @0)<CR>  " move last yank selection to xclip
+imap jk <Esc>                          " uses 'jk' as ESC
