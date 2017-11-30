@@ -49,6 +49,7 @@ filetype plugin indent on    " required
 call pathogen#infect()
 
 " Few configurations:
+set nowrap
 set hlsearch " Highlight search results
 set encoding=utf8
 set background=dark
