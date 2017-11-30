@@ -81,12 +81,12 @@ if executable('ag')
 endif
 
 " CtrlP to ignore
-set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps
+set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps,_build
 let g:ctrlp_show_hidden = 1
 
 " NerdTree show hidden files
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.swp$', '\.pyc$', '\.class$']
+let NERDTreeIgnore=['\.swp$', '\.pyc$', '\.class$', '^_build$', '^deps$']
 
 " JSX syntax on .js files
 let g:jsx_ext_required = 0
@@ -101,11 +101,12 @@ set cursorline
 " Short cuts:
 let mapleader=","
 map <C-\> :NERDTreeToggle<CR>
-map <C-F> :NERDTreeFind<CR>            " Open NERDTree and focus on current file
+map <leader>f :NERDTreeFind<CR>        " Open NERDTree and focus on current file
 map <leader>e :e!<CR>                  " force reload current file
 map <leader>c :CtrlPClearAllCaches<CR> " clear all CtrlP cache
-map <leader>\| :vertical :new<CR>       " open new vertical window
+map <leader>\| :vertical :new<CR>      " open new vertical window
 map <leader>- :new<CR>                 " open a new horizontal window
 map <leader>n :tabnew<CR>              " create a new tab
 map <leader>b :CtrlPBuffer<CR>         " Clear CtrlP buffers
 imap jk <Esc>                          " uses 'jk' as ESC
+map <leader>h :noh<CR>                 " no hightlight
