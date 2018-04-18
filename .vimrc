@@ -25,6 +25,7 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'itchyny/lightline.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-endwise'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -32,6 +33,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rhysd/vim-crystal'
 Plugin 'mhinz/vim-startify'
+Plugin 'joshdick/onedark.vim'
 
 " Status bar plugin (lightline)
 let g:lightline = {
@@ -47,6 +49,11 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 call pathogen#infect()
+colorscheme onedark
+
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 
 " Few configurations:
 set nowrap
@@ -76,6 +83,7 @@ set colorcolumn=100
 hi ColorColumn ctermbg=darkgrey
 set wildmenu
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=235 gui=NONE guifg=NONE guibg=NONE
+hi CursorLineNR cterm=bold ctermfg=206
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -96,7 +104,7 @@ let g:jsx_ext_required = 0
 set tabstop=2 shiftwidth=2 expandtab
 
 " Cursor line higlight
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+highlight CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 set cursorline
 
 " Short cuts:
