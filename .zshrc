@@ -23,6 +23,7 @@ alias dps="docker ps"
 alias dstop="docker-compose stop"
 alias ddown="docker-compose down"
 alias dkill="docker kill \`docker ps -q\`"
+alias clear-branchs="g branch -D \`git branch | grep -v master | grep -v staging\`; git fetch -p"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.asdf/asdf.sh
