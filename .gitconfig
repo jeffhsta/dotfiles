@@ -28,6 +28,7 @@
   signingkey = C39C19AC
 
 [alias]
+  cm = commit -v
   co = checkout
   st = status
   df = diff
@@ -36,7 +37,7 @@
   pop = stash pop
   lg = log --graph --pretty=format:'%C(yellow)%h %Cblue%aN %Cgreen%ar %Cblue%G? %Creset%s'
   ls = log --stat
-  cs = "!f() { git commit --author=\""${1}" <$(git config user.email)>\" -e -m \"$(cat ~/.git_commit_msg.txt | sed 's/DDD/\\[#'$2'\\]/g')\"; }; f"
+  cs = "!f() { git commit --author=\""${1}/" $(git config user.email)\"; }; f"
   mg = "!f() { git merge "${1}" --no-ff --no-edit; }; f"
   # git cs jeff/ygor 6 -> example usage
 
@@ -48,3 +49,6 @@
 
 [rebase]
 	gpgsign = true
+
+[diff]
+  tool = vimdiff
