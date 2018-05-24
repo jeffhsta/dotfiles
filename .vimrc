@@ -90,7 +90,7 @@ if executable('ag')
 endif
 
 " CtrlP to ignore
-set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps,_build
+set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps,_build,dist
 let g:ctrlp_show_hidden = 1
 
 " NerdTree show hidden files
@@ -117,5 +117,4 @@ map <leader>\| :vertical :new<CR>      " open new vertical window
 map <leader>- :new<CR>                 " open a new horizontal window
 map <leader>n :tabnew<CR>              " create a new tab
 map <leader>b :CtrlPBuffer<CR>         " Clear CtrlP buffers
-imap jk <Esc>                          " uses 'jk' as ESC
 map <leader>h :noh<CR>                 " no hightlight
