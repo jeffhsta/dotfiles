@@ -107,6 +107,9 @@ set tabstop=2 shiftwidth=2 expandtab
 highlight CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 set cursorline
 
+" Custom commands:
+com! FormatJSON %!python -m json.tool
+
 " Short cuts:
 let mapleader=","
 map <C-\> :NERDTreeToggle<CR>
