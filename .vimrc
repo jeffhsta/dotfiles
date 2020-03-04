@@ -34,6 +34,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rhysd/vim-crystal'
 Plugin 'mhinz/vim-startify'
 Plugin 'joshdick/onedark.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'soramugi/auto-ctags.vim'
 
 " Status bar plugin (lightline)
 let g:lightline = {
@@ -54,6 +56,10 @@ colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
+
+" Ctags settings
+let g:auto_ctags = 1
+let g:auto_ctags_tags_args = ['--tag-relative=yes', '--recurse=yes', '--sort=yes', '--exclude=node_modules']
 
 " Few configurations:
 set nowrap
