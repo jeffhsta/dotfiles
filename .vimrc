@@ -81,6 +81,7 @@ set relativenumber
 set vb
 set ignorecase
 set clipboard=unnamed
+set clipboard+=unnamedplus
 set ttyfast
 set lazyredraw
 set novisualbell
