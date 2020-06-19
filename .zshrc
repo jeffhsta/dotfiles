@@ -25,8 +25,9 @@ alias dstop="docker-compose stop"
 alias ddown="docker-compose down"
 alias dkill="docker kill \`docker ps -q\`"
 alias clear-branchs="g branch -D \`git branch | grep -v master | grep -v staging\`; git fetch -p"
-alias aws-dev="export AWS_ACCESS_KEY_ID=$DEV_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$DEV_AWS_SECRET_ACCESS_KEY"
-alias aws-prod="export AWS_ACCESS_KEY_ID=$PROD_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$PROD_AWS_SECRET_ACCESS_KEY"
+alias aws-ebanx-dev="export AWS_ACCESS_KEY_ID=$EBANX_DEV_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_DEV_AWS_SECRET_ACCESS_KEY"
+alias aws-ebanx-prod="export AWS_ACCESS_KEY_ID=$EBANX_PROD_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_PROD_AWS_SECRET_ACCESS_KEY"
+alias aws-jeff="export AWS_ACCESS_KEY_ID=$JEFF_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$JEFF_AWS_SECRET_ACCESS_KEY"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.asdf/asdf.sh
