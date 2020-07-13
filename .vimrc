@@ -37,16 +37,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'joshdick/onedark.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'soramugi/auto-ctags.vim'
-
-" Status bar plugin (lightline)
-"let g:lightline = {
-      "\ 'colorscheme': 'wombat',
-      "\ 'component': {
-      "\   'readonly': '%{&readonly?"":""}',
-      "\ },
-      "\ 'separator': { 'left': '', 'right': '' },
-      "\ 'subseparator': { 'left': '', 'right': '' }
-      "\ }
+Plugin 'editorconfig/editorconfig-vim'
 
 let g:lightline = {
       \ 'component_function': {
