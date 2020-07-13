@@ -132,10 +132,7 @@ com! FormatJSON %!python -m json.tool
 let mapleader=","
 map <C-\> :NERDTreeToggle<CR>
 map <leader>f :NERDTreeFind<CR>        " Open NERDTree and focus on current file
-map <leader>e :e!<CR>                  " force reload current file
-map <leader>c :CtrlPClearAllCaches<CR> " clear all CtrlP cache
 map <leader>\| :vertical :new<CR>      " open new vertical window
 map <leader>- :new<CR>                 " open a new horizontal window
 map <leader>n :tabnew<CR>              " create a new tab
-map <leader>b :CtrlPBuffer<CR>         " Clear CtrlP buffers
 map <leader>h :noh<CR>                 " no hightlight
