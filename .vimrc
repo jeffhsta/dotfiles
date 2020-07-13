@@ -4,6 +4,7 @@ filetype off
 
 set directory=~/tmp/vim-swap
 set rtp+=~/.vim/bundle/Vundle.vim
+set autoread
 call vundle#begin()
 
 " Plugin 'jamessan/vim-gnupg' " It get a lot of warning when I try to open -
@@ -23,7 +24,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tfnico/vim-gradle'
 Plugin 'itchyny/lightline.vim'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-endwise'
@@ -34,21 +35,36 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rhysd/vim-crystal'
 Plugin 'mhinz/vim-startify'
 Plugin 'joshdick/onedark.vim'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 Plugin 'soramugi/auto-ctags.vim'
 
 " Status bar plugin (lightline)
+"let g:lightline = {
+      "\ 'colorscheme': 'wombat',
+      "\ 'component': {
+      "\   'readonly': '%{&readonly?"":""}',
+      "\ },
+      "\ 'separator': { 'left': '', 'right': '' },
+      "\ 'subseparator': { 'left': '', 'right': '' }
+      "\ }
+
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \ }
       \ }
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+function! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfunction
+
+call vundle#end()         " required
+filetype plugin indent on " required
 
 call pathogen#infect()
 colorscheme onedark
@@ -97,7 +113,7 @@ if executable('ag')
 endif
 
 " CtrlP to ignore
-set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps,_build,dist
+set wildignore+=*.swp,*.pyc,*.class,.venv,node_modules,deps,_build,dist,*.beam
 let g:ctrlp_show_hidden = 1
 
 " NerdTree show hidden files
@@ -113,6 +129,10 @@ set tabstop=2 shiftwidth=2 expandtab
 " Cursor line higlight
 highlight CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 set cursorline
+
+" Typescript plugin config
+let g:tsuquyomi_completion_detail = 1
+let g:typescript_ignore_browserwords = 0
 
 " Custom commands:
 com! FormatJSON %!python -m json.tool
