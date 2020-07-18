@@ -38,6 +38,7 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'soramugi/auto-ctags.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ElmCast/elm-vim'
 
 let g:lightline = {
       \ 'component_function': {
