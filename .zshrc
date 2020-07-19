@@ -28,6 +28,7 @@ alias clear-branchs="g branch -D \`git branch | grep -v master | grep -v staging
 alias aws-ebanx-dev="export AWS_ACCESS_KEY_ID=$EBANX_DEV_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_DEV_AWS_SECRET_ACCESS_KEY"
 alias aws-ebanx-prod="export AWS_ACCESS_KEY_ID=$EBANX_PROD_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_PROD_AWS_SECRET_ACCESS_KEY"
 alias aws-jeff="export AWS_ACCESS_KEY_ID=$JEFF_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$JEFF_AWS_SECRET_ACCESS_KEY"
+alias pbcopy="xclip -selection clipboard" # For Linux machines
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.asdf/asdf.sh
