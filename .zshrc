@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 HYPHEN_INSENSITIVE="true"
 
-plugins=(git docker docker-compose gpg-agent)
+plugins=(git docker docker-compose gpg-agent kubectl)
 
 # User configuration
 
@@ -23,7 +23,7 @@ alias dps="docker ps"
 alias dstop="docker-compose stop"
 alias ddown="docker-compose down"
 alias dkill="docker kill \`docker ps -q\`"
-alias clear-branchs="g branch -D \`git branch | grep -v master \`; git fetch -p"
+alias clear-branchs="g branch -D \`git branch | grep -v master | grep -v main \`; git fetch -p"
 alias aws-ebanx-dev="export AWS_ACCESS_KEY_ID=$EBANX_DEV_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_DEV_AWS_SECRET_ACCESS_KEY"
 alias aws-ebanx-prod="export AWS_ACCESS_KEY_ID=$EBANX_PROD_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$EBANX_PROD_AWS_SECRET_ACCESS_KEY"
 alias aws-jeff="export AWS_ACCESS_KEY_ID=$JEFF_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$JEFF_AWS_SECRET_ACCESS_KEY"
