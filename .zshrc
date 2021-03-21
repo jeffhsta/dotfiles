@@ -8,7 +8,7 @@ plugins=(git docker docker-compose gpg-agent kubectl)
 
 # User configuration
 
-export EDITOR=vim
+export EDITOR="code -w"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export NODEJS_PATH="~/.asdf/installs/nodejs/13.8.0/.npm/bin"
