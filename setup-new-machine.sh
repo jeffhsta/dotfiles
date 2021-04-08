@@ -1,12 +1,13 @@
-# check if it's running with root
-
-sudo apt-key --keyring /usr/share/keyrings/1password.gpg adv --keyserver keyserver.ubuntu.com --recv-keys 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password.gpg] https://downloads.1password.com/linux/debian edge main' | sudo tee /etc/apt/sources.list.d/1password.list
+#! /bin/bash
 
 sudo apt update && sudo apt upgrade
 
 sudo apt install --yes \
-1password \
+xclip \
+docker.io \
+postgresql-client \
+docker-compose \
+openssh-server \
 code \
 gnome-tweaks \
 git \
@@ -34,7 +35,7 @@ libxml2-dev \
 libxml2-utils \
 libxmlsec1-dev \
 libffi-dev \
-liblzma-dev
+liblzma-dev \
 autoconf \
 m4 \
 libwxgtk3.0-gtk3-dev \
@@ -48,20 +49,26 @@ fop \
 libncurses-dev \
 openjdk-11-jdk
 
-flatpak install \
-Postman \
-Signal \
-Telegram \
-Slack \
-Spotify \
-Steam \
-Discord \
-Gimp \
-io.dbeaver.DBeaverCommunity \
-com.obsproject.Studio
+# Install 1password client
+sudo apt-key --keyring /usr/share/keyrings/1password.gpg adv --keyserver keyserver.ubuntu.com --recv-keys 3FEF9748469ADBE15DA7CA80AC2D62742012EA22
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password.gpg] https://downloads.1password.com/linux/debian edge main' | sudo tee /etc/apt/sources.list.d/1password.list
+
+sudo apt install 1password
+
+# flatpak install \
+# Postman \
+# Signal \
+# Telegram \
+# Slack \
+# Spotify \
+# Steam \
+# Discord \
+# Gimp \
+# io.dbeaver.DBeaverCommunity \
+# com.obsproject.Studio
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-git clone git@github.com:ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -70,6 +77,8 @@ mkdir -p ~/tmp/vim-swap
 echo "To finish installing TMUX plugin open it and press <prefix> + I. To install VIM plugins open it and run :PluginInstall"
 
 chsh -s /bin/zsh
+
+zsh
 source ~/.zshrc
 
 asdf plugin-add erlang
