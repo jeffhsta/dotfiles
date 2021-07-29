@@ -27,6 +27,7 @@ alias dkill="docker kill \`docker ps -q\`"
 alias clear-branchs="g branch -D \`git branch | grep -v master | grep -v main \`; git fetch -p"
 alias aws-jeff="export AWS_ACCESS_KEY_ID=$JEFF_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$JEFF_AWS_SECRET_ACCESS_KEY"
 alias aws-sb="export AWS_MFA_ARN=$SB_AWS_MFA_ARN; export AWS_REGION=$SB_AWS_REGION; export AWS_DEFAULT_REGION=$SB_AWS_REGION"
+alias aws-january="export AWS_ACCESS_KEY_ID=$JANUARY_AWS_ACCESS_KEY_ID; export AWS_SECRET_ACCESS_KEY=$JANUARY_AWS_SECRET_ACCESS_KEY"
 alias pbcopy="xclip -selection clipboard" # For Linux machines
 
 aws_mfa ()
