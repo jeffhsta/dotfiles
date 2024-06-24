@@ -27,7 +27,14 @@
   email = jefferson.stachelski@gmail.com
   signingkey = C39C19AC
 
+[commit]
+	gpgsign = true
+
+[rebase]
+	gpgsign = true
+
 [alias]
+  commit = commit --no-verify
   cm = commit -v
   co = checkout
   st = status
@@ -44,11 +51,7 @@
 [push]
   default = simple
 
-[commit]
-	gpgsign = true
-
-[rebase]
-	gpgsign = true
-
 [diff]
   tool = vimdiff
+[init]
+	defaultBranch = main
